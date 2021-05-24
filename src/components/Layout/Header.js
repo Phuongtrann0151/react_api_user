@@ -6,7 +6,7 @@ export default function Footer(){
   return (
     <header>
       <nav class="navbar navbar-light bg-light justify-content-between">
-        <a class="navbar-brand">Navbar</a>
+        <a class="navbar-brand">My App</a>
         <form class="form-inline">
           <ul class="nav justify-content-center">
             <li class="nav-item">
