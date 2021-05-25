@@ -1,6 +1,9 @@
 import React from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import '../css/Header.css';
+
 import Todo from '../TodoList/Todo.jsx'
 
 export default class Header extends React.Component {

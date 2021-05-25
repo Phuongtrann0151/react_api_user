@@ -1,13 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
-export default class TodoList extends React.Component {
-  render(){
-    return (
-      <ul>
-        { this.props.words.map(word => (
-          <li key={word.id}>{word.text}</li>
-        )) }
-      </ul>
-    )
-  }
+function TodoList(props){
+  const listWords = props.words
+  const word = listWords.map(char => (
+    <li key={char.id}>{char.text}</li>
+  ))
+  return <ul>{ word }</ul>
 }
+
+TodoList.propTypes = {
+  words: PropTypes.string
+}
+
+export default TodoList
