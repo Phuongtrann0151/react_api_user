@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../css/Header.css';
+import Todo from '../TodoList/Todo.jsx'
 
 export default class Header extends React.Component {
   constructor(props){
@@ -19,7 +20,7 @@ export default class Header extends React.Component {
       id: Date.now()
     }
     this.setState(state => ({
-      words: state.items.concat(allWords),
+      words: state.words.concat(allWords),
       text: ''
     }))
   }
@@ -29,7 +30,7 @@ export default class Header extends React.Component {
   render(){
     return (
       <header>
-        <nav class="navbar navbar-light bg-light justify-content-between" words={this.state.items}>
+        <nav class="navbar navbar-light bg-light justify-content-between" >
           <a class="navbar-brand">My App</a>
           <form class="form-inline" onSubmit={this.handleClick}>
             <ul class="nav justify-content-center">
@@ -44,6 +45,7 @@ export default class Header extends React.Component {
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Submit</button>
           </form>
         </nav>
+        <Todo words={this.state.words}/>
       </header>
     )
   }
